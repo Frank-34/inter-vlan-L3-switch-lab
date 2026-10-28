@@ -1,4 +1,4 @@
-# Day 18 Lab: Multilayer Switching (Inter-VLAN Routing with SVIs)
+#  Lab: Multilayer Switching (Inter-VLAN Routing with SVIs)
 
 A Cisco Packet Tracer lab where inter-VLAN routing moves from a router (router-on-a-stick) to a Layer 3 switch using SVIs and a routed point-to-point link to the edge router.
 
@@ -147,5 +147,5 @@ Notes on the results:
 │   ├── R1.txt
 │   └── SW2.txt
 ├── images/
-└── Day18-Multilayer-Switching.pkt   (add your Packet Tracer file here)
+└── Lab-Multilayer-Switching.pkt  
 ```
