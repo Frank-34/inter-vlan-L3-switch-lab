@@ -1,0 +1,14 @@
+! R1 (Cisco 2911) - commands applied for the Day 18 lab
+! Step 1: remove the router-on-a-stick subinterfaces
+enable
+configure terminal
+no interface g0/0.10
+no interface g0/0.20
+no interface g0/0.30
+!
+! Step 2: point-to-point link to SW2 (10.0.0.192/30)
+interface g0/0
+ ip address 10.0.0.194 255.255.255.252
+ no shutdown
+end
+write memory

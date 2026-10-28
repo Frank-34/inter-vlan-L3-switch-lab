@@ -1,0 +1,27 @@
+! SW2 (Cisco 3650-24PS) - commands applied for the Day 18 lab
+enable
+configure terminal
+!
+! Routed port to R1 (point-to-point /30)
+interface g1/0/2
+ no switchport
+ ip address 10.0.0.193 255.255.255.252
+!
+! Turn on Layer 3 routing
+ip routing
+!
+! SVIs: last usable address of each /26
+interface vlan 10
+ ip address 10.0.0.62 255.255.255.192
+ no shutdown
+interface vlan 20
+ ip address 10.0.0.126 255.255.255.192
+ no shutdown
+interface vlan 30
+ ip address 10.0.0.190 255.255.255.192
+ no shutdown
+!
+! Default route: R1 G0/0 is the next hop
+ip route 0.0.0.0 0.0.0.0 10.0.0.194
+end
+write memory
